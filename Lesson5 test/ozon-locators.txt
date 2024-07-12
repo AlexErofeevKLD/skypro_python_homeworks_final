@@ -1,5 +1,5 @@
-Локатор кнопки Войти - $('div span.o2d_47_9')
-Локатор кнопки Заказы - $('a span.o2d_14_9')
-Локатор ссылки OZON Job - $('div .fd6_9')
-Локатор выбора валюты - $('button[data-widget="selectedCurrency"]')
-Локатор выпадашки Везде - $('div span.aac8_32')
+Локатор кнопки Войти - //span [text()='Войти']
+Локатор кнопки Заказы - //span [text()='Заказы']
+Локатор ссылки OZON Job - $('[href="https://job.ozon.ru/?perehod=footer"][class="a5h d3f"]')
+Локатор выбора валюты - $('[data-widget="selectedCurrency"]')
+Локатор выпадашки Везде - $('[title="Везде"]')
