@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome()
 
@@ -9,9 +8,7 @@ try:
         "id", "newButtonName").send_keys("SkyPro")
     confirm_button_name = driver.find_element("id", "updatingButton").click()
     print(driver.find_element("id", "updatingButton").text)
-    
 except Exception as ex:
     print(ex)
 finally:
     driver.quit()
-
