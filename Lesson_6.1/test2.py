@@ -17,9 +17,8 @@ def test_calculator_form(chrome_browser):
     chrome_browser.find_element(By.XPATH, "//span[text() = '=']").click()
 
     wait = WebDriverWait(chrome_browser, 46)
-    result = wait.until(EC.text_to_be_present_in_element(
-        (By.CLASS_NAME, "screen"), "15"))
-    result_text = chrome_browser.find_element(By.CLASS_NAME, "screen").text
+    wait.until(EC.invisibility_of_element_located((By.ID, "spinner")))
 
+    result_text = chrome_browser.find_element(By.CLASS_NAME, "screen").text
     assert result_text == "15"
-    print(result)
+    print(result_text)
