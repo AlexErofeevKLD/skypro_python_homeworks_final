@@ -2,7 +2,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from Lesson_7.constants import Test_form_URL
-from Lesson_7.Data_types.data import *
+from Lesson_7.Data_types.data import first_name, last_name, address, \
+email, phone, zip_code, city, country, job_position, company
 
 
 class mainpage:
@@ -19,7 +20,7 @@ class mainpage:
         self._zip_code = (By.NAME, "zip-code")
         self._city = (By.NAME, "city")
         self._country = (By.NAME, "country")
-        self._job_position = (By.NAME, "job_position")
+        self._job_position = (By.NAME, "job-position")
         self._company = (By.NAME, "company")
         self._button = (By.TAG_NAME, "button")
 
@@ -36,4 +37,5 @@ class mainpage:
         self.browser.find_element(*self._company).send_keys(company)
 
     def click_submit_button(self):
-        WebDriverWait(self.browser, 40, 0.1).until(EC.element_to_be_clickable(self._button)).click()
+        WebDriverWait(self.browser, 40, 0.5).until(EC.element_to_be_clickable
+            (self._button)).click()
