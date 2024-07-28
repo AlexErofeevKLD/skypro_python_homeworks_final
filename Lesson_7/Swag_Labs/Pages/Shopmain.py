@@ -17,7 +17,8 @@ class ShopmainPage:
 
     def buy_issue(self):
         self.Sauce_Labs_Backpack = (By.ID, "add-to-cart-sauce-labs-backpack")
-        self.Sauce_Labs_Bolt_TShirt = (By.ID, "add-to-cart-sauce-labs-bolt-t-shirt")
+        self.Sauce_Labs_Bolt_TShirt = (
+            By.ID, "add-to-cart-sauce-labs-bolt-t-shirt")
         self.Sauce_Labs_Onesie = (By.ID, "add-to-cart-sauce-labs-onesie")
 
     def click_issue(self):

@@ -22,5 +22,8 @@ class CalcMain:
 
     def wait_button_gettext(self):
         expected_text = "15"
-        WebDriverWait(self.browser, 46).until(EC.text_to_be_present_in_element((By.CLASS_NAME, "screen"), expected_text))
+        WebDriverWait(
+            self.browser, 46).until(
+            EC.text_to_be_present_in_element(
+                (By.CLASS_NAME, "screen"), expected_text))
         return self.browser.find_element(By.CLASS_NAME, "screen").text

@@ -22,7 +22,11 @@ class ShopContainer:
         self.browser.find_element(*self.continue_button).click()
 
     def price(self):
-        WebDriverWait(self.browser, 10, 0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".summary_total_label")))
-        total_price = self.browser.find_element(By.CSS_SELECTOR, ".summary_total_label")
+        WebDriverWait(
+            self.browser, 10, 0.5).until(
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, ".summary_total_label")))
+        total_price = self.browser.find_element(
+            By.CSS_SELECTOR, ".summary_total_label")
         total = total_price.text.strip().replace("Total: $", "")
         return total
