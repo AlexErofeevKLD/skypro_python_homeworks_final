@@ -1,5 +1,4 @@
 from Lesson_8.Employee import Employer, Company
-import json
 
 employer = Employer()
 company = Company()
@@ -62,7 +61,6 @@ def test_add_employer_without_token():
 
 def test_add_employer_without_body(get_token):
     token = str(get_token)
-    com_id = company.last_active_company_id()
     body_employer = {}
     new_employer = employer.add_new(token, body_employer)
     assert new_employer['message'] == 'Internal server error'
