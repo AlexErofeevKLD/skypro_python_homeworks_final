@@ -1,10 +1,9 @@
-
 import requests
 import json
 from Lesson_8.constants import x_clients_URL
 
 
-path = '/employee/'
+path = '/Employee/'
 
 
 class Company:
@@ -42,7 +41,7 @@ class Employer:
 
     def get_info(self, employee_id: int):
         response = requests.get(self.url + path + str(employee_id))
-        return response.json()
+        return response
 
     def change_info(self, token: str, employee_id: int, body: json):
         headers = {'x-client-token': token}
