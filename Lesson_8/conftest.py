@@ -2,6 +2,7 @@ import pytest
 import requests
 from Lesson_8.constants import x_clients_URL
 
+
 @pytest.fixture()
 def get_token(username='raphael', password='cool-but-crude'):
     log_pass = {'username': username, 'password': password}
